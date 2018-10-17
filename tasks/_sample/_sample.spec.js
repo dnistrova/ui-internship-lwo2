@@ -1,6 +1,6 @@
-// import { binarySearch } from './_sample';
+import { binarySearch } from './_sample';
 
-xdescribe('binarySearch', () => {
+describe('binarySearch', () => {
     let arr;
 
     beforeEach(() => {
