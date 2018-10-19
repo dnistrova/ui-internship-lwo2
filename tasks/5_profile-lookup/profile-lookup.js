@@ -28,14 +28,15 @@ export const contacts = [
 ];
 
 export function lookupProfile(firstName, prop) {
-  for (let i = 0; i < contacts.length; i++) {
-    if (contacts[i].firstName === firstName) {
-      if (contacts[i].hasOwnProperty(prop)) {
-        return contacts[i][prop];
-      } else {
-        return 'No such property';
-      }
+  let contact = contacts.find((e) => e.firstName == firstName);
+
+  if (contact) {
+    if (contact.hasOwnProperty(prop)) {
+      return contact[prop];
+    } else {
+      return 'No such property';
     }
+  } else {
+    return 'No such contact';
   }
-  return 'No such contact';
 }
