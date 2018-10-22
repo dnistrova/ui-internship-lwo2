@@ -1,9 +1,9 @@
 export function getVowelCount(str) {
-  str = str.toLowerCase();
-  let vowels = 'aeiou';
+  const newStr = str.toLowerCase();
+  const vowels = 'aeiou';
   let vowelCount = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.indexOf(str[i]) !== -1) {
+  for (let i = 0; i < newStr.length; i++) {
+    if (vowels.indexOf(newStr[i]) !== -1) {
       vowelCount++;
     }
   }
