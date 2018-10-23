@@ -1,5 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
-
 export function uniqueInOrder(str) {
   let uniques = [];
   for (let i=0; i<str.length; i++) {

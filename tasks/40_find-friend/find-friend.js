@@ -1,5 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
-
 export function findFriend(arr) {
   let friendMask = 'red';
   let counter = 0;

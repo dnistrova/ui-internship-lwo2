@@ -1,5 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
-
 export function arrayLeaders(arr) {
   const newArr = [];
   const size = arr.length;

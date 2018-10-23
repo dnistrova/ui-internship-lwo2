@@ -1,5 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
-
 export function minNumberToPrime(numbers) {
   let number = numbers.reduce(function(acc, val) {
     return acc + val;

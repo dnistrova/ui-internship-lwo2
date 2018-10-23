@@ -1,5 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
-
 export function arrayPlusArray(arr1, arr2) {
   const result = [];
   let count = 0;

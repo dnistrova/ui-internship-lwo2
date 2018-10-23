@@ -1,5 +1,3 @@
-/* eslint linebreak-style: ["error", "windows"] */
-
 export function reverseStringInRange(str, param) {
   let reversedString = str.split('')
       .slice(param[0], param[1]+1)
