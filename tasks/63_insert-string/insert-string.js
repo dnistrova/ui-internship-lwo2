@@ -1,9 +1,6 @@
-export function insert(mainStr, str, position) {
-  if (typeof(position) == 'undefined') {
-    position = 0;
+export function insert(mainStr, str = '', position = 0) {
+  if (str === '') {
+    return mainStr;
   }
-  if (typeof(str) == 'undefined') {
-    str = '';
-  }
-  return mainStr.slice(0, position) + str + mainStr.slice(position);
+  return `${mainStr.slice(0, position)}${str}${mainStr.slice(position)}`;
 }
