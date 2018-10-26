@@ -8,7 +8,7 @@ function isPrime(value) {
 }
 
 export function numPrimorial(num) {
-  let array = [];
+  const array = [];
   for (let i = 2; num !== array.length; i++) {
     if (isPrime(i)) {
       array.push(i);
