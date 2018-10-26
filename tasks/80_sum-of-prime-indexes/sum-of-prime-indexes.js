@@ -1,5 +1,5 @@
 function isPrime(element, index, array) {
-  let start = 2;
+  const start = 2;
   while (start <= Math.sqrt(index)) {
     if (index % start++ < 1) {
       return false;
