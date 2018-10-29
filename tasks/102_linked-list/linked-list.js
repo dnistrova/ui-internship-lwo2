@@ -93,7 +93,6 @@ export class LinkedList {
 
     while (current !== null) {
       if (current.value === valueToRemove) {
-
         if (current.prev !== null) {
           current.prev.next = current.next;
         }
