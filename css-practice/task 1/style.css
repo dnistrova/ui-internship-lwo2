@@ -17,7 +17,7 @@ a h4:hover {
   text-decoration: underline #ffffff;
 }
 header {
-  height: 100vh;
+  height: 751px;
   background: url("img/header.png") no-repeat center;
   background-size: cover;
 }
@@ -31,7 +31,7 @@ div.header-text img:last-child {
   position: absolute;
   display: block;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 190px;
   width: 100%;
   height: 100%;
   color: #ffffff;
@@ -53,11 +53,11 @@ div.header-text img:last-child {
   line-height: 21px;
   text-transform: uppercase;
   margin: 0 auto;
-  margin-bottom: 25%;
+  padding-bottom: 220px;
 }
 .bordered {
   text-align: center;
-  width: 644px;
+  width: 635px;
   border: 2px solid #3c3c3c;
   border-top: 0; 
   text-align: center;
@@ -98,7 +98,7 @@ h2 span:after {
   border-top-color: #ffffff;
 }
 .about-us {
-  height: 450px;
+  height: 445px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,7 +110,7 @@ h2 span:after {
   align-items: center;
 }
 .about-us .bordered {
-  height: 223px;
+  height: 220px;
 }
 .about-us .description {
   width: 400px;
@@ -118,7 +118,7 @@ h2 span:after {
   font-size: 11px;
   font-weight: 200;
   line-height: 17px;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 .about-us .description p {
   padding: 10px 0;
@@ -126,7 +126,7 @@ h2 span:after {
 .services {
   background: url("img/services.png") no-repeat center; 
   background-size: cover;
-  height: 349px;
+  height: 341px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,12 +140,13 @@ h2 span:after {
 .services .bordered {
   height: 179px;
   border-color: #ffffff;
+  margin-top: 10px;
 }
 .services .bordered h2 {
   color: #ffffff;
 }
 .services .description {
-  width: 400px;
+  width: 396px;
   height: 84px;
   color: #ffffff;
   font-size: 11px;
@@ -154,7 +155,7 @@ h2 span:after {
   margin: 20px auto;
 }
 .what-we-do {
-  height: 844px;
+  height: 820px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,7 +178,7 @@ h2 span:after {
   letter-spacing: 4px;
 }
 .what-we-do img {
-  margin-bottom: 28px;
+  margin-bottom: 15px;
   width: 57px;
 }
 .what-we-do .description {
@@ -255,7 +256,7 @@ footer {
   margin: 30px auto;
 }
 .contacts button {
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   width: 282px;
   height: 41px;
   border: 2px solid #3c3c3c;
