@@ -1,5 +1,3 @@
-@import 'variables';
-
 * {
   margin: 0;
   padding: 0;
@@ -52,8 +50,8 @@ header {
     }
   }
 }
-.baner {
-  background: url("../img/baner.png") no-repeat center;
+.banner {
+  background: url("../img/banner.png") no-repeat center;
   background-size: cover;
   background-color: #000000;
   background-position-y: -72px;
@@ -61,7 +59,7 @@ header {
   color: $colorWhite;
   font-size: 16px;
 }
-.baner-text {
+.banner-text {
   padding-top: 110px;
   width: 47.5%;
   font-family: $fontRaleway;
@@ -75,7 +73,7 @@ header {
   @include flex-row-spacebetween();
   @include align-items(baseline);
 }
-.baner-text p {
+.banner-text p {
   margin-top: 34px;
   font-size: 16px;
   font-weight: 300;
@@ -87,7 +85,7 @@ header {
   width: 66px;
   margin-top: 34px;
 }
-.baner-text button {
+.banner-text button {
   border: 2px solid $colorWhite;
   padding: 10px 30px;
   color: $colorWhite;
@@ -151,7 +149,7 @@ header {
     bottom: 0;
   }
 }
-.under-baner-panel {
+.under-banner-panel {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.38);
 }
 .social-media-bar {
@@ -564,8 +562,8 @@ p {
     font-weight: 400;
   }
 }
-.small-baner {
-  background: url("../img/small-baner.png") no-repeat center;
+.small-banner {
+  background: url("../img/small-banner.png") no-repeat center;
   background-size: cover;
   background-color: #000000;
   color: $colorWhite;

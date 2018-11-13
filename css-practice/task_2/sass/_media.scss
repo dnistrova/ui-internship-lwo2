@@ -1,5 +1,5 @@
 @media only screen and (max-width: 1399px) {
-  .baner {
+  .banner {
     background-position-y: 0;
   }
   .feedbacks {
@@ -40,7 +40,7 @@
     @include justify-content(center);
     @include align-items(center);
   }
-  .baner-text {
+  .banner-text {
     padding: 10%;
     margin-bottom: 10%;
     .white-line {
@@ -66,7 +66,7 @@
   .contact-form form {
     @include flex-direction(column);
   }
-  .baner-text,
+  .banner-text,
   .social-media-bar .media-bar-text,
   .tab-description,
   .standart-picture .sub-description {
