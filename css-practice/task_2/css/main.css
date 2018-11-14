@@ -7,14 +7,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: #ffffff; }
 
-.wrapper {
-  max-width: 1400px;
-  margin: 0 auto; }
-
-.container {
-  max-width: 1100px;
-  margin: 0 10.7%; }
-
 a {
   text-decoration: none;
   color: #ffffff;
@@ -53,6 +45,18 @@ header {
       margin-top: 20px;
       margin-bottom: 20px; }
 
+footer {
+  text-align: center;
+  background-color: #000000; }
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 10.7%; }
+
 .header-nav-bar {
   font-size: 14px; }
   .header-nav-bar a {
@@ -60,8 +64,8 @@ header {
     .header-nav-bar a:last-child {
       margin-right: 0; }
 
-.baner {
-  background: url("../img/baner.png") no-repeat center;
+.banner {
+  background: url("../img/banner.png") no-repeat center;
   background-size: cover;
   background-color: #000000;
   background-position-y: -72px;
@@ -69,11 +73,11 @@ header {
   color: #ffffff;
   font-size: 16px; }
 
-.baner-text {
+.banner-text {
   padding-top: 110px;
   width: 47.5%;
   font-family: "Raleway", sans-serif; }
-  .baner-text h1 {
+  .banner-text h1 {
     padding-top: 20px;
     text-transform: uppercase;
     font-size: 36px; }
@@ -98,7 +102,7 @@ header {
   -ms-align-items: baseline;
   align-items: baseline; }
 
-.baner-text p {
+.banner-text p {
   margin-top: 34px;
   font-size: 16px;
   font-weight: 300;
@@ -110,7 +114,7 @@ header {
   width: 66px;
   margin-top: 34px; }
 
-.baner-text button {
+.banner-text button {
   border: 2px solid #ffffff;
   padding: 10px 30px;
   color: #ffffff;
@@ -169,7 +173,7 @@ header {
     position: absolute;
     bottom: 0; }
 
-.under-baner-panel {
+.under-banner-panel {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.38); }
 
 .social-media-bar {
@@ -689,26 +693,26 @@ p.customer-occupation {
   font-size: 14px;
   font-weight: 400; }
 
-.small-baner {
-  background: url("../img/small-baner.png") no-repeat center;
+.small-banner {
+  background: url("../img/small-banner.png") no-repeat center;
   background-size: cover;
   background-color: #000000;
   color: #ffffff;
   font-family: "Raleway", sans-serif;
   text-align: center; }
-  .small-baner .white-line {
+  .small-banner .white-line {
     margin: 22px auto 30px; }
-  .small-baner h2 {
+  .small-banner h2 {
     font-size: 36px;
     font-weight: 400;
     text-transform: uppercase;
     padding-top: 66px; }
-  .small-baner p {
+  .small-banner p {
     opacity: 0.8;
     font-size: 16px;
     font-weight: 300;
     margin-bottom: 33px; }
-  .small-baner button {
+  .small-banner button {
     margin-bottom: 63px;
     border: 2px solid #ffffff;
     padding: 10px 30px;
@@ -792,10 +796,6 @@ p.customer-occupation {
   margin-top: 2px;
   margin-bottom: 82px; }
 
-footer {
-  text-align: center;
-  background-color: #000000; }
-
 .footer-icons {
   color: #cccccc;
   font-size: 24px;
@@ -811,7 +811,7 @@ footer {
   padding-bottom: 12px; }
 
 @media only screen and (max-width: 1399px) {
-  .baner {
+  .banner {
     background-position-y: 0; }
   .feedbacks {
     -webkit-justify-content: space-around;
@@ -852,10 +852,10 @@ footer {
     -moz-align-items: center;
     -ms-align-items: center;
     align-items: center; }
-  .baner-text {
+  .banner-text {
     padding: 10%;
     margin-bottom: 10%; }
-    .baner-text .white-line {
+    .banner-text .white-line {
       margin: 10px auto; }
   .main-form {
     width: 80%;
@@ -876,7 +876,7 @@ footer {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .baner-text,
+  .banner-text,
   .social-media-bar .media-bar-text,
   .tab-description,
   .standart-picture .sub-description {
