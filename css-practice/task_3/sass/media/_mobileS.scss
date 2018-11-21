@@ -1,0 +1,15 @@
+@media only screen and (max-width: 320px) {
+  .container {
+    width: 200px;
+  }
+  .main-banner {
+    h1 {
+    font-size: 40px;
+    }
+  }
+  .subscribe {
+    input {
+    padding-right: 0px;
+    }
+  }
+}

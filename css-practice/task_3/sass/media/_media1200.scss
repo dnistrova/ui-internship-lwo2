@@ -1,0 +1,75 @@
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 760px;
+  }
+  .main-banner {
+    h1 {
+      max-width: 100%;
+      font-size: 100px;
+    }
+  }
+  .hover-image {
+    width: 228px;
+    height: 150px;
+  }
+  .hover-image.social-icons-hover {
+    width: 228px;
+    height: 282px;
+  }
+  .three-images.about-us-images {
+    width: 100%;
+    .about-us-image {
+      max-width: 30%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .three-articles {
+    width: 100%;
+    .article {
+      max-width: 30%;
+    }
+  }
+  .three-images.team-photoes {
+    width: 100%;
+    .worker {
+      max-width: 30%;
+      img {
+        max-width: 100%;
+      }
+    }
+  } 
+  .brands {
+    .container {
+      @include template-columns(1fr 1fr 1fr);
+      @include template-rows(50% 50%);
+    }
+  }
+  .three-images.blog-articles {
+    width: 100%;
+    article {
+      max-width: 30%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .happy-clients {
+    @include template-columns(100%);
+  }
+  .what-we-do-image {
+    img {
+    max-width: 350px;
+    margin-top: 25%;
+    }
+  }
+  footer {
+    .container {
+      @include flex-wrap(wrap);
+      .footer-contacts {
+        max-width: 760px;
+      }
+    }
+  }
+}

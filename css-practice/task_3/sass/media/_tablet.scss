@@ -1,0 +1,159 @@
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 420px;
+    header & {
+      width: 80%;
+      margin: 0 auto;
+      .logo {
+        padding: 0 10px; 
+      }
+    }
+  }
+  .main-banner {
+    h1 {
+      font-size: 50px;
+      line-height: 50px;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 30px;
+    }
+  }
+  .header-nav-bar {
+    margin-right: 25px;
+    a {
+      display: none;
+    &:last-child {
+      display: inline-block;
+    }
+  }
+}
+  .bordered-menu {
+    display: block;
+    div {
+      max-width: 280px;
+      width: 100%;
+    &:first-child {
+      margin-left: 30px;
+    }
+  }
+}
+  .three-images {
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+  .three-images.about-us-images {
+    width: 100%;
+    .about-us-image {
+      max-width: 100%;
+      margin: 20px auto;
+    }
+  }
+  .number-block p {
+    font-size: 40px;
+  }
+  .client-photo {
+    padding-left: 0;
+  }
+  .three-articles {
+    @include flex-direction(column);
+    margin: 0 auto;
+    article {
+      width: 100%;
+      @include justify-content(flex-start);
+      @include align-items(center);
+      margin: 10px auto;
+    }
+    &.second-row {
+      margin-bottom: 80px;
+      padding: 0;
+    }
+  }
+  .services-section {
+    .long-line {
+      display: none;
+    }
+  }
+  .what-we-do-accordion {
+    @include flex-direction(column);
+    @include justify-content(center);
+    .what-we-do-image {
+      margin: 20px auto;
+    }
+  }
+  .phone-large {
+    left: 14px;
+    max-width: 410px;
+  }
+  .phone-small {
+    left: 35%;
+  }
+  .comments .container {
+    @include flex-direction(column);
+    @include justify-content(center);
+    >img {
+      display: none;
+    } 
+  }
+  .three-images.team-photoes {
+    width: 100%;
+    .worker {
+      max-width: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .comment {
+    @include flex-direction(column);
+    @include justify-content(center);
+    >img {
+      display: none;
+    } 
+  }
+  .three-images.three-images.blog-articles {
+    width: 100%;
+    article {
+      max-width: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .footer-blogs,  
+  .footer-instagram  {
+    margin: 40px auto;
+    max-width: 100%;
+    h2 {
+      text-align: center;
+    }
+    .instagram-photos {
+      display: inline-block;
+    }
+  }
+  .hover-image {
+    width: 381px;
+    height: 251px;
+    .worker & {
+      width: 380px;
+      height: 470px;
+    }
+  }
+  .brands {
+    .container {
+      @include template-columns(1fr 1fr);
+      @include template-rows(30% 30% 30%);
+    }
+  }
+  .work-images {
+    @include template-columns(50% 50%);
+    @include template-rows(25% 25% 25% 25%);
+  }
+  .larger-picture {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 3/1/span 2/span 1;
+  }
+}
