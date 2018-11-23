@@ -37,16 +37,16 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
               <button>Download</button>
             </div>
-            <div class="main-form">
+            <div id="headerForm" class="main-form">
               <div class="form-heading">
                   <h2>Try Your <span>free</span> Trial Today</h2>
               </div>
-              <form>
-                  <input type="text" placeholder="Name">
-                  <input type="email" placeholder="Email">
-                  <input type="password" placeholder="Password">
+              <form name="header-form" action="#0" method="POST">
+                  <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Z]+$" required>
+                  <input type="email" name="email" placeholder="Email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
+                  <input type="password" name="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[#?!@$%^&*-]).{6,}$" required>
+                  <button type="submit" name="submit">Get Started</button>
               </form>
-              <button>Get Started</button>
             </div>
           </div>
         </div>
@@ -73,11 +73,11 @@
     <section class="about-tabs">
         <div class="container">
           <div class="tabs">
-            <div class="tab active">Tab 1</div>
-            <div class="tab">Tab 2</div>
-            <div class="tab">Tab 3</div>
+            <div class="tab" id="default-open" onclick="activateTab(event, 'tab-1')">Tab 1</div>
+            <div class="tab" onclick="activateTab(event, 'tab-2')">Tab 2</div>
+            <div class="tab" onclick="activateTab(event, 'tab-3')">Tab 3</div>
           </div>
-          <div class="tab-description">
+          <div class="tab-description" id="tab-1">
             <h3>Tabs with soft transitioning effect.</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod 
                 bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra 
@@ -87,8 +87,20 @@
                 bibendum laoreet.</p>
             <button>Download</button>
           </div>
+          <div class="tab-description" id="tab-2">
+            <h3>Tabs 2 with soft transitioning effect.</h3>
+            <p>Te saepe tractatos per, cu vim liber singulis expetendis, in vide delenit sententiae nec. Congue commune singulis eam ex, has an utinam tamquam, ius ad alia nobis nemore.</p>
+            <p>Lorem ipsum dolor sit amet, cu eruditi patrioque per, ut per reque dolor scripta. Eius qualisque consequat an ius, soleat putent mediocritatem ut has. Per at hinc brute consulatu, zril erroribus omittantur ius ad. Ei sint mutat corpora vel. Ut torquatos temporibus mea. Mea ad patrioque neglegentur.</p>
+            <button>Download</button>
+          </div>
+          <div class="tab-description" id="tab-3">
+            <h3>Tabs 3 with soft transitioning effect.</h3>
+            <p>Vim alii sonet in, an mea sonet prodesset similique. Te qui diam accumsan convenire, ei usu nihil noluisse referrentur. Vim te harum persecuti, sale simul eam no, cu omnium mentitum neglegentur ius. Ne qui magna latine.</p>
+            <p>Lorem ipsum dolor sit amet, dicam convenire cu quo. Falli consul ex his. At iracundia evertitur eos, eos in sumo sensibus elaboraret.</p>
+            <button>Download</button>
+          </div>
           <div class="tab-image">
-            <img src="img/tab-image.png" alt="black and white picture">
+            <img id="tab-image" src="img/tab-image.png" alt="black and white picture">
           </div>
         </div>
     </section>
@@ -312,17 +324,17 @@
           <div class="orange-line"></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div class="contact-form">
-              <form>
+              <form name="footer-form" action="#0" method="POST">
                 <div class="left-column-form">
-                  <input type="text" name="name" placeholder="Name">
-                  <input type="email" name="email" placeholder="Email">
-                  <input type="text" name="subject" placeholder="Subject">
+                  <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Z]+$" required>
+                  <input type="email" name="email" placeholder="Email" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" required>
+                  <input type="text" name="subject" placeholder="Subject" pattern=".{1,30}">
                 </div>
                 <div class="right-column-form">
-                  <textarea class="message" rows="11" name="message" placeholder="Message"></textarea>
+                  <textarea class="message" rows="11" minlength="1" maxlength="250" name="message" placeholder="Message" required></textarea>
                 </div>
+                <button type="submit">Send Message</button>
               </form>
-              <button>Send Message</button>
           </div>
       </div>
     </section>
@@ -341,5 +353,6 @@
         </div>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
