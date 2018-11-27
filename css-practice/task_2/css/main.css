@@ -279,7 +279,11 @@ footer {
 .tab.active {
   background-color: #ff8b38; }
 
+.tab-description.active {
+  display: block; }
+
 .tab-description {
+  display: none;
   width: 43.5%;
   padding-left: 2px;
   padding-top: 2px;
@@ -822,6 +826,12 @@ p.customer-occupation {
     opacity: 0; }
   to {
     opacity: 1; } }
+
+textarea.invalid, input.invalid {
+  border-bottom: 1px solid red; }
+
+textarea.valid, input.valid {
+  border-bottom: 1px solid green; }
 
 @media only screen and (max-width: 1399px) {
   .banner {

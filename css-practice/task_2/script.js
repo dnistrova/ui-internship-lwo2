@@ -1,36 +1,38 @@
 function validatePattern(event) {
-  const element=event.target;
-  if (element.validity) {
-    if (element.validity.patternMismatch) {
-      element.style.borderBottom = '1px solid red';
-    } else {
-      element.style.borderBottom = '1px solid green';
-    }
+  const element = event.target;
+  if (!element.validity) return;
+
+  if (element.validity.patternMismatch) {
+    element.classList.remove('valid');
+    element.classList.add('invalid');
+  } else {
+    element.classList.remove('invalid');
+    element.classList.add('valid');
   }
 }
 
-const headerInputs = document.forms['header-form'].elements;
-for (let i = 0; i < headerInputs.length; i++) {
-  headerInputs[i].addEventListener('blur', validatePattern, false);
+const forms = document.getElementsByClassName('validated-form');
+
+for (let i = 0; i < forms.length; i++) {
+  forms[i].addEventListener('blur', validatePattern, true);
 }
 
-const footerInputs = document.forms['footer-form'].elements;
-for (let i = 0; i < footerInputs.length; i++) {
-  footerInputs[i].addEventListener('blur', validatePattern, false);
-}
+const tabs = document.getElementsByClassName('tabs')[0];
+tabs.addEventListener('click', (evt) => activateTab(evt));
 
-function activateTab(evt, tabNum) {
-  const tabdescription = document.getElementsByClassName('tab-description');
-  for (let i = 0; i < tabdescription.length; i++) {
-    tabdescription[i].style.display = 'none';
+function activateTab(evt) {
+  const tab = evt.srcElement;
+  const dataId = tab.getAttribute('data-id');
+
+  const tabDescriptions = document.getElementsByClassName('tab-description');
+  const tabs = document.getElementsByClassName('tab');
+
+  for (let i = 0; i < tabs.length; i++) {
+    tabDescriptions[i].classList.remove('active');
+    tabs[i].classList.remove('active');
   }
-  const tablinks = document.getElementsByClassName('tab');
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(' active', '');
-  }
-  document.getElementById(tabNum).style.display = 'block';
-  evt.currentTarget.className += ' active';
+
+  const activeTabDescription = document.getElementById(dataId);
+  activeTabDescription.classList.add('active');
+  tab.classList.add('active');
 }
-
-document.getElementById('default-open').click();
-
