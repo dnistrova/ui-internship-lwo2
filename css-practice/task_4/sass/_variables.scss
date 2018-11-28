@@ -1,0 +1,113 @@
+@font-face {
+    font-family: header-font;
+    src: url(../fonts/Exo-Thin.ttf);
+}
+@font-face {
+    font-family: main-font;
+    src: url(../fonts/exo.light.otf);
+}
+
+$header-font: header-font;
+$font-main: main-font;
+$font-main-color: #282828;
+$section-background-color: #f6f5f3;
+$crossed-div-background-color: #ededed;
+$aside-background-color: #323969;
+$square-buttons-and-section-name-color: #ff6d6d;
+$main-white-font: white;
+$buttons-text-color: $main-white-font;
+$founders-names: $main-white-font;
+$founders-color: #4e4e5e;
+
+@mixin header-form-center {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin intro-medium {
+    article {
+        padding-bottom: 7%;
+        padding-top: 7%;
+        div {
+            width: 69%;
+            padding-left: 5%;
+        }
+        h2 {
+            font-size: 37px;
+        }
+    }
+        
+}
+
+@mixin top-new-medium {
+    article {
+        margin-left: 2%;
+        padding-top: 2%;
+        width: 50%;
+    }
+    h2 {
+        font-size: 23px;
+        line-height: 1;
+    }
+}
+
+@mixin macbook {
+    height: 45%;
+    margin-bottom: 10px;
+    width: 45%;
+}
+
+@mixin other-news-middle {
+    padding-top: 10%;
+        img {
+            width: 70%;
+        }
+        article {
+            margin-bottom: 3%;
+        }
+}
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+@mixin flex-direction($direction) {
+-webkit-flex-direction: $direction;
+    -moz-flex-direction: $direction;
+    -ms-flex-direction: $direction;
+        flex-direction: $direction;
+}
+
+@mixin justify-content($justify) {
+    -webkit-justify-content: $justify;
+       -moz-justify-content: $justify;
+        -ms-justify-content: $justify;
+            justify-content: $justify;
+              -ms-flex-pack: $justify;
+}
+
+@mixin align-content($align) {
+    -webkit-align-content: $align;
+       -moz-align-content: $align;
+        -ms-align-content: $align;
+            align-content: $align;
+}
+
+@mixin align-items($align) {
+    -webkit-align-items: $align;
+       -moz-align-items: $align;
+        -ms-align-items: $align;
+            align-items: $align;
+}
+  @mixin align-self($align) {
+    -webkit-align-self: $align;
+       -moz-align-self: $align;
+        -ms-align-self: $align;
+            align-self: $align;
+}

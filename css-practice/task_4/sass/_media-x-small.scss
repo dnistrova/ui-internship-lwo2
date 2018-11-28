@@ -1,0 +1,141 @@
+@import "variables";
+
+@media (min-width: 320px) and (max-width: 424px) {
+    header h1 {
+        font-size: 30px;
+    }
+    .user-actions {
+        @include header-form-center;
+    }
+    .play-mode, .try-now {
+        margin-left: 0;
+    }
+
+    .intro {
+        @include intro-medium;
+        h2 {
+            font-size: 23px;
+        }
+    }
+    .empty {
+        display: none;
+    }
+    .intro {
+        article {
+        width: 100%;
+        h2 {
+            font-size: 23px;
+        }
+        }   
+    }
+    .penholder, .earphones, .coffee {
+        display: none;
+    }
+ 
+    .about {
+        padding-bottom: 40px;
+        h2 {
+            font-size: 23px;
+        }
+        h3 {
+            margin-top: 40px;
+        }
+        div {
+            display: block;
+        }
+        article {
+            width: 95%;
+            padding-bottom: 15px;
+        }
+    }
+        
+    .top-new {
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+        padding-left: 0;
+        img {
+            display: none;
+        }
+        article {
+            width: 80%;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            font-size: 23px;
+            line-height: 1;
+        }
+    }
+    .co-founders {
+        display: block;
+    }
+    .founder {
+        width: 100%;
+    }
+    .partners {
+        display: inline-block;
+        text-align: center;
+        padding-left: 10%;
+        img {
+            height: 50px;
+            width: auto;
+        }
+    }
+
+    .other-news {
+        @include other-news-middle;
+        h2 {
+            font-size: 23px;
+        }
+        article {
+            width: 76%;
+        }
+    }
+
+    aside {
+        h2 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .feedback {
+            width: 90%;
+            display: inline-block;
+            text-align: center;
+            padding-left: 0;
+            margin-left: 0;
+            input:first-child {
+                margin-left: 29px;
+            }
+        }
+        .pointer {
+            @include align-self(flex-end);
+            width: 260px;
+            display: inline-flex;
+            height: 43px;
+            margin-top: 7px;
+            margin-bottom: 6px;
+            margin-right: 12%;
+            position: relative;
+            top: 10;
+            bottom: -179px;
+        }
+    }
+
+    .footer-wrapper {
+        @include flexbox();
+        flex-direction: row;
+        flex-wrap: wrap;
+        div {
+            margin-left: 10px;
+        }
+    }
+    .e-mail {
+        margin-left: 0;
+    }
+}

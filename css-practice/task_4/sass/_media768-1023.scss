@@ -1,0 +1,94 @@
+@import "variables";
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header h1 {
+        font-size: 50px;
+    }
+    .user-actions {
+        @include header-form-center;
+    }
+    .play-mode, .try-now {
+        margin-left: 0;
+    }
+
+    .intro {
+        @include intro-medium;
+    }
+
+    .about{
+        div {
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-self(center);
+            width: 81%;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        article {
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-items(center);
+            width: 80%;
+            padding-bottom: 26px;
+        }
+    }
+        
+    .penholder {
+    position: absolute;
+    left: -17px;
+    top: 0;
+    }
+    .earphones {
+    position: absolute;
+    right: 6px;
+    top: 0px;
+    }
+
+    .macbook {
+        @include macbook; 
+    }
+        
+    .top-new {
+        @include top-new-medium;
+    }
+    .partners {
+        img {
+            height: 70px;
+        }
+    }
+
+    .other-news {
+        @include other-news-middle;
+    }
+
+    aside {
+        .feedback {
+            width: 79%;
+            display: inline-block;
+            text-align: center;
+            padding-left: 10%;
+            input:first-child {
+                margin-left: 29px;
+            }
+        }
+        .pointer {
+            @include align-self(flex-end);
+            width: 260px;
+            display: inline-flex;
+            height: 43px;
+            margin-top: 7px;
+            margin-bottom: 6px;
+            margin-right: 12%;
+            position: relative;
+            top: 10;
+            bottom: -80px;
+        }
+    }
+
+    .footer-wrapper {
+        flex-wrap: wrap;
+        align-items: center;
+        width: 77%;
+        margin: 0 auto;
+    }
+}

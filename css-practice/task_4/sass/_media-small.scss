@@ -1,0 +1,129 @@
+@import "variables";
+
+@media (min-width: 425px) and (max-width: 767px) {
+    header h1 {
+        font-size: 40px;
+    }
+    .user-actions {
+        @include header-form-center;
+    }
+    .play-mode, .try-now {
+        margin-left: 0;
+    }
+
+    .intro {
+        @include intro-medium;
+    }
+    .empty {
+        display: none;
+    }
+    .intro {
+        article {
+        width: 100%;
+        h2 {
+            font-size: 30px;
+        }
+        }   
+    }
+    .penholder, .earphones, .coffee {
+        display: none;
+    }
+ 
+    .about {
+        padding-bottom: 90px;
+        h2 {
+            font-size: 30px;
+        }
+        h3 {
+            margin-top: 90px;
+        }
+        div {
+            display: block;
+        }
+        article {
+            width: 95%;
+            padding-bottom: 15px;
+        }
+    }
+        
+    .top-new {
+        @include flex-direction(column);
+        align-items: center;
+        background-image: none;
+        padding-left: 0;
+        img {
+            display: none;
+        }
+        article {
+            width: 80%;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            font-size: 30px;
+            line-height: 1;
+        }
+    }
+    .co-founders {
+        display: block;
+    }
+    .founder {
+        width: 100%;
+    }
+    .partners {
+        display: inline-block;
+        text-align: center;
+        padding-left: 10%;
+        img {
+            height: 70px;
+            width: auto;
+        }
+    }
+
+    .other-news {
+        @include other-news-middle;
+        h2 {
+            font-size: 30px;
+        }
+        article {
+            width: 76%;
+        }
+    }
+
+    aside {
+        h2 {
+            font-size: 30px;
+        }
+        .feedback {
+            width: 79%;
+            display: inline-block;
+            text-align: center;
+            padding-left: 0;
+            input:first-child {
+                margin-left: 29px;
+            }
+        }
+        .pointer {
+            @include align-self(flex-end);
+            width: 260px;
+            display: inline-flex;
+            height: 43px;
+            margin-top: 7px;
+            margin-bottom: 6px;
+            margin-right: 12%;
+            position: relative;
+            top: 10;
+            bottom: -179px;
+        }
+    }
+
+    .footer-wrapper {
+        @include flexbox();
+        @include flex-direction(row);
+        flex-wrap: wrap;
+        div {
+            margin-left: 10px;
+        }
+    }
+    
+}
