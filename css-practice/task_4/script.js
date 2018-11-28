@@ -1,5 +1,9 @@
 const video = document.getElementsByClassName('main-video')[0];
 const videoBtn = document.getElementsByClassName('play-mode')[0];
+const formInput = document.querySelectorAll('input');
+const inputs = Array.from(formInput);
+const form = document.forms[0];
+const tryNowBtn = document.getElementById('form-button');
 
 function pauseVideo() {
   if (!video.paused) {
@@ -27,20 +31,11 @@ function validatePattern(event) {
   }
 }
 
-const form = document.forms[0];
-form.addEventListener('blur', validatePattern, true);
-
-function isValid(element, index, array) {
-  return element = document.querySelector('input').classList.contains('valid');
-}
-
-const formInput = document.querySelectorAll('input');
-const tryNowBtn = document.getElementById('form-button');
-
+form.addEventListener('keyup', validatePattern, true);
 function notDisabled() {
-  if (Array.from(formInput).every(isValid)) {
+  if (inputs.every((el) => el.classList.contains('valid'))) {
     tryNowBtn.classList.remove('disabled');
   }
 }
-
-tryNowBtn.addEventListener('click', notDisabled);
+// tryNowBtn.addEventListener('click', notDisabled);
+form.addEventListener('keyup', notDisabled, true);
