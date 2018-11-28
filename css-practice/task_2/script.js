@@ -2,7 +2,11 @@ function validatePattern(event) {
   const element = event.target;
   if (!element.validity) return;
 
-  if (element.validity.patternMismatch) {
+  if (
+    element.validity.patternMismatch ||
+    element.value === '' ||
+    element.value == null
+  ) {
     element.classList.remove('valid');
     element.classList.add('invalid');
   } else {
@@ -20,8 +24,8 @@ for (let i = 0; i < forms.length; i++) {
 const tabs = document.getElementsByClassName('tabs')[0];
 tabs.addEventListener('click', (evt) => activateTab(evt));
 
-function activateTab(evt) {
-  const tab = evt.srcElement;
+function activateTab (evt) {
+  const tab = evt.target;
   const dataId = tab.getAttribute('data-id');
 
   const tabDescriptions = document.getElementsByClassName('tab-description');

@@ -828,10 +828,20 @@ p.customer-occupation {
     opacity: 1; } }
 
 textarea.invalid, input.invalid {
-  border-bottom: 1px solid red; }
+  border-bottom: 1px solid #ff0000;
+  background-image: url(../img/invalid-icon.png);
+  background-size: 20px;
+  background-position: right top;
+  background-repeat: no-repeat;
+  -moz-box-shadow: none; }
 
 textarea.valid, input.valid {
-  border-bottom: 1px solid green; }
+  border-bottom: 1px solid #7dbb46;
+  background-image: url(../img/valid-icon.png);
+  background-size: 20px;
+  background-position: right top;
+  background-repeat: no-repeat;
+  -moz-box-shadow: none; }
 
 @media only screen and (max-width: 1399px) {
   .banner {
