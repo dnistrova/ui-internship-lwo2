@@ -649,6 +649,8 @@ footer {
     background-position: center;
     margin-left: -36px;
     z-index: 3; }
+  .e-mail .valid {
+    border: 1px solid #4e4e5e; }
 
 .follow-us {
   margin-top: 30px;
