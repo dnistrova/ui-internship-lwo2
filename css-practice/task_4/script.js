@@ -7,14 +7,16 @@ const tryNowBtn = document.getElementById('form-button');
 
 function pauseVideo() {
   video.pause();
-  videoBtn.classList.remove('play');
-  videoBtn.classList.add('pause');
-}
-function playVideo() {
-  video.play();
   videoBtn.classList.add('play');
   videoBtn.classList.remove('pause');
 }
+
+function playVideo() {
+  video.play();
+  videoBtn.classList.remove('play');
+  videoBtn.classList.add('pause');
+}
+
 function videoPlayer() {
   if (!video.paused) {
     pauseVideo();
