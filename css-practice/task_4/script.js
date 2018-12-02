@@ -1,26 +1,33 @@
 const video = document.getElementsByClassName('main-video')[0];
 const videoBtn = document.getElementsByClassName('play-mode')[0];
-const formInput = document.querySelectorAll('input');
-const inputs = Array.from(formInput);
 const form = document.forms[0];
+const formInput = form.querySelectorAll('input');
+const inputs = Array.from(formInput);
 const tryNowBtn = document.getElementById('form-button');
 
 function pauseVideo() {
+  video.pause();
+  videoBtn.classList.remove('play');
+  videoBtn.classList.add('pause');
+}
+function playVideo() {
+  video.play();
+  videoBtn.classList.add('play');
+  videoBtn.classList.remove('pause');
+}
+function videoPlayer() {
   if (!video.paused) {
-    video.pause();
-    videoBtn.classList.remove('play');
-    videoBtn.classList.add('pause');
+    pauseVideo();
   } else {
-    video.play();
-    videoBtn.classList.add('play');
-    videoBtn.classList.remove('pause');
+    playVideo();
   }
 }
 
-videoBtn.addEventListener('click', pauseVideo);
+videoBtn.addEventListener('click', videoPlayer);
 
 function validatePattern(event) {
   const element = event.target;
+
   if (!element.validity) return;
   if (element.validity.patternMismatch || element.value === '' || element.value == null) {
     element.classList.remove('valid');
@@ -32,10 +39,15 @@ function validatePattern(event) {
 }
 
 form.addEventListener('keyup', validatePattern, true);
+
 function notDisabled() {
-  if (inputs.every((el) => el.classList.contains('valid'))) {
+  const validInputs = inputs.every((el) => el.classList.contains('valid'));
+  
+  if (validInputs) {
     tryNowBtn.classList.remove('disabled');
+  } else {
+    tryNowBtn.classList.add('disabled');
   }
 }
-// tryNowBtn.addEventListener('click', notDisabled);
+
 form.addEventListener('keyup', notDisabled, true);
