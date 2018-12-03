@@ -15,7 +15,8 @@ function playVideo() {
   video.play();
   videoBtn.classList.remove('play');
   videoBtn.classList.add('pause');
-  
+}
+
 function videoPlayer() {
   if (!video.paused) {
     pauseVideo();
@@ -43,7 +44,7 @@ form.addEventListener('keyup', validatePattern, true);
 
 function notDisabled() {
   const validInputs = inputs.every((el) => el.classList.contains('valid'));
-  
+
   if (validInputs) {
     tryNowBtn.classList.remove('disabled');
   } else {
