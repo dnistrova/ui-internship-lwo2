@@ -44,7 +44,7 @@ form.addEventListener('keyup', validatePattern, true);
 
 function notDisabled() {
   const validInputs = inputs.every((el) => el.classList.contains('valid'));
-
+  
   if (validInputs) {
     tryNowBtn.classList.remove('disabled');
   } else {
