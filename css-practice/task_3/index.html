@@ -21,11 +21,11 @@
       <div class="logo"><a href="#">MoGo</a></div>
       <div>
         <nav class="header-nav-bar">
-          <a href="#">about</a>
-          <a href="#">service</a>
-          <a href="#">work</a>
-          <a href="#">blog</a>
-          <a href="#">contact</a>
+          <a class="nav-item" href="#about">about</a>
+          <a class="nav-item" href="#service">service</a>
+          <a class="nav-item" href="#work">work</a>
+          <a class="nav-item" href="#blog">blog</a>
+          <a class="nav-item" href="#contact">contact</a>
           <a href="#"><i class="fa fa-shopping-cart"></i></a>
           <a href="#"><i class="fas fa-search"></i></a>
           <a href="#"><i class="fas fa-bars"></i></a>
@@ -55,7 +55,7 @@
       </div>
     </div>
   </section>
-  <section class="about-us">
+  <section id="about" class="about-us main">
     <div class="container">
       <div class="story-about section-heading">
         <h4>What we do</h4>
@@ -107,7 +107,7 @@
       </div>
     </div>
   </section>
-  <section class="services-section">
+  <section id="service" class="services-section main">
     <div class="container">
       <div class="services section-heading">
         <h4>We work with</h4>
@@ -165,13 +165,13 @@
   </section>
   <section class="phones">
     <div class="container">
-        <div class="design section-heading">
-          <h4>For all devices</h4>
-          <h3>Unique Design</h3>
-          <hr class="line red">
-        </div>
-          <img class="phone-large" src="img/large-pnone.png" alt="large phone">
-          <img class="phone-small" src="img/small-pnone.png" alt="small phone">
+      <div class="design section-heading">
+        <h4>For all devices</h4>
+        <h3>Unique Design</h3>
+        <hr class="line red">
+      </div>
+      <img class="phone-large" src="img/large-pnone.png" alt="large phone">
+      <img class="phone-small" src="img/small-pnone.png" alt="small phone">
     </div>
   </section>
   <section class="what-we-do">
@@ -191,40 +191,58 @@
         </div>
         <div class="accordion">
           <div class="accordion-section first">
-            <div class="accordion-heading">
+            <button class="accordion-heading default-open">
               <img src="img/picture-icon.png" alt="picture icon">
               <h3>Photography</h3>
-              <i class="icon-angle-up"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
-              <br/>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-              pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.</p>
+            </button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+                <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
           </div>
           <div class="accordion-section second">
-            <div class="accordion-heading">
+            <button class="accordion-heading">
               <img src="img/equalizer-icon.png" alt="equalizer icon">
               <h3>creativity</h3>
-              <i class="icon-angle-down"></i>
-            </div>
+            </button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
           </div>
           <div class="accordion-section third">
-            <div class="accordion-heading">
+            <button class="accordion-heading">
               <img src="img/bullseye-icon.png" alt="bullseye icon">
               <h3>web design</h3>
-              <i class="icon-angle-down"></i>
-            </div>
+            </button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+          </div>
           </div>
         </div>
       </div>
@@ -232,10 +250,10 @@
   </section>
   <div class="comments">
     <div class="container">
-      <img src="img/arrow-left.svg" alt="arrow left">
-      <div class="speech-icon">
-        <img src="img/speech-icon.png" alt="speech icon">
-      </div>
+      <div class="slide">
+        <div class="speech-icon">
+          <img src="img/speech-icon.png" alt="speech icon">
+        </div>
         <div class="blockquote">
           <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -245,8 +263,39 @@
             <p>Jon Doe</p>
           </div>
         </div>
-      <img src="img/arrow-right.svg" alt="arrow right">
+      </div>
+      <div class="slide">
+        <div class="speech-icon">
+          <img src="img/speech-icon.png" alt="speech icon">
+        </div>
+        <div class="blockquote">
+          <p>“Habemus officiis explicari nam in, prompta dissentiunt
+            qui te. Accumsan delicata eam ea. Stet laudem accumsan at
+            ius, nec malorum virtute maluisset ea. Vim an quodsi inermis”</p>
+          <div class="author">
+            <hr class="line red">
+            <p>Matthew Dix</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="speech-icon">
+          <img src="img/speech-icon.png" alt="speech icon">
+        </div>
+        <div class="blockquote">
+          <p>“Ea eos commune democritum dissentias, ignota constituto eum cu.
+            Hendrerit interesset pri ad, detraxit percipitur instructior et
+            eos. Te nobis legere temporibus qui. Ea offendit indoctum”</p>
+          <div class="author">
+            <hr class="line red">
+            <p>Christopher Campbell</p>
+          </div>
+        </div>
+      </div>
+      <a class="arrow prev"><img src="img/arrow-left.svg" alt="arrow left"></a>
+      <a class="arrow next"><img src="img/arrow-right.svg" alt="arrow right"></a>
     </div>
+  </div>
   </div>
   <section class="who-we-are">
     <div class="container">
@@ -294,7 +343,7 @@
       <img src="img/studio.png" alt="studio logo">
     </div>
   </div>
-  <section class="some-of-our-work">
+  <section id="work" class="some-of-our-work main">
     <div class="container">
       <div class="our-work section-heading">
         <h4>What we do</h4>
@@ -306,20 +355,24 @@
           nisi ut aliquip ex ea commodo consequat.</p>
       </div>
     </div>
-      <div class="work-images">
-        <img src="img/image-1.png" alt="man and sea">
-        <img src="img/image-2.png" alt="construction">
-        <img class="larger-picture" src="img/image-3.png" alt="jelly fish">
-        <img src="img/image-4.png" alt="glass ceiling">
-        <img src="img/image-5.png" alt="bridge">
-        <img src="img/image-6.png" alt="building">
-        <img src="img/image-7.png" alt="skyscraper">
-      </div>
+    <div id="popup-images" class="work-images">
+      <img class="popup-image" src="img/image-1.png" alt="man and sea">
+      <img class="popup-image" src="img/image-2.png" alt="construction">
+      <img class="larger-picture popup-image" src="img/image-3.png" alt="jelly fish">
+      <img class="popup-image" src="img/image-4.png" alt="glass ceiling">
+      <img class="popup-image" src="img/image-5.png" alt="bridge">
+      <img class="popup-image" src="img/image-6.png" alt="building">
+      <img class="popup-image" src="img/image-7.png" alt="skyscraper">
+    </div>
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
   </section>
   <div class="blockquotes">
     <div class="container">
-      <div class="comment">
-        <img src="img/arrow-left.svg" alt="arrow left">
+      <div class="comment slide-2">
         <div class="author-photo">
           <img src="img/joshua-earle.png" alt="Joshua Earle">
         </div>
@@ -332,8 +385,38 @@
             <p>Joshua Earle</p>
           </div>
         </div>
-        <img src="img/arrow-right.svg" alt="arrow right">
       </div>
+      <div class="comment slide-2">
+          <div class="author-photo">
+            <img src="img/joshua-earle.png" alt="Joshua Earle">
+          </div>
+          <div class="blockquote">
+            <p>“Lorem ipsum dolor sit amet, alia maiestatis intellegebat 
+              in has. Iriure philosophia sed ei, dictas epicuri cu est, 
+              no posse viderer aliquando cum. Et mel erant fastidii mediocrem.”</p>
+            <div class="author">
+              <hr class="line red">
+              <p>Matthew Dix</p>
+            </div>
+          </div>
+        </div>
+        <div class="comment slide-2">
+            <div class="author-photo">
+              <img src="img/joshua-earle.png" alt="Joshua Earle">
+            </div>
+            <div class="blockquote">
+              <p>“
+                  Elit intellegebat interpretaris eam in, vis quot utinam 
+                  tincidunt in. Ex usu solum viderer alterum. Nam ea liber 
+                  scripta expetenda, in vidit aperiri repudiare mei. No mel.”</p>
+              <div class="author">
+                <hr class="line red">
+                <p>Michael Fertig</p>
+              </div>
+            </div>
+          </div>
+        <a class="arrow prev"><img src="img/arrow-left.svg" alt="arrow left"></a>
+        <a class="arrow next"><img src="img/arrow-right.svg" alt="arrow right"></a>
     </div>
   </div>
   <section class="people-say">
@@ -399,7 +482,7 @@
       </div>
     </div>
   </section>
-  <section class="latest-blog">
+  <section id="blog" class="latest-blog main">
     <div class="container">
       <div class="blog section-heading">
         <h4>Our stories</h4>
@@ -415,7 +498,7 @@
           <div class="latest-blog-paragraph">
             <h2>Lorem ipsum dolor sit amet</h2>
             <p>Consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
+              incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div class="counter">
             <p><span><i class="far fa-eye"></i></span> 542</p>
@@ -429,7 +512,8 @@
           </div>
           <div class="latest-blog-paragraph">
             <h2>sed do eiusmod tempor</h2>
-            <p class="latest-blog-paragraph">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="latest-blog-paragraph">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.</p>
           </div>
           <div class="counter">
             <p><span><i class="far fa-eye"></i></span> 992</p>
@@ -446,14 +530,14 @@
             <p class="latest-blog-paragraph">Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div class="counter">
-          <p><span><i class="far fa-eye"></i></span> 1560</p>
-          <p><i class="fas fa-comment-dots"></i> 98</p>
+            <p><span><i class="far fa-eye"></i></span> 1560</p>
+            <p><i class="fas fa-comment-dots"></i> 98</p>
           </div>
         </article>
       </div>
     </div>
   </section>
-  <section class="map">
+  <section id="contact" class="map main">
     <div class="open-map">
       <img src="img/map-marker.svg" alt="map marker">
       <h3>Open map</h3>
@@ -535,6 +619,10 @@
       <p>&#169; 2016 MoGo free PSD template by <span>Laaqiq</span></p>
     </div>
   </footer>
+  <script src="navbar.js"></script>
+  <script src="accordion.js"></script>
+  <script src="popup-images.js"></script>
+  <script src="blockquotes.js"></script>
 </body>
 
 </html>

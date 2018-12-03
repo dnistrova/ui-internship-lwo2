@@ -1,0 +1,54 @@
+.comments,
+.blockquotes {
+  .container {
+    position: relative;
+    padding: 70px;
+    -webkit-transition:all 1.0s ease-in-out;
+    -moz-transition:all 1.0s ease-in-out;
+    -o-transition:all 1.0s ease-in-out;
+    transition:all 1.0s ease-in-out;
+  }
+}
+.comment {
+  padding: 0;
+}
+.slide {
+  display: none;
+  &.show-comment {
+    display: flex;
+  }
+  .speech-icon {
+  align-self: center;
+  }
+}
+
+.slide-2 {
+  display: none;
+  &.show-comment {
+    display: flex;
+  }
+  .author-photo {
+  align-self: center;
+  }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  padding: 10px;
+  border-radius: 3px;
+  user-select: none;
+  top: 150px;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: #000000;
+}

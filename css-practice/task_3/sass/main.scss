@@ -6,7 +6,9 @@
   padding: 0;
   @include box-sizing();
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: $font-montserrat;
   background-color: $backgroundColorWhite;
@@ -24,7 +26,7 @@ button {
   }
 }
 header {
-  height: 90px;
+  height: 75px;
   font-family: $font-montserrat;
   font-size: 30px;
   .container {
@@ -38,7 +40,6 @@ header {
     }
   }
 }
-
 .header-nav-bar {
   @include flexbox();
   width: 49%;
@@ -60,7 +61,8 @@ header {
         border-bottom: none;
       }
     }
-    &:hover {
+    &:hover,
+    &:active {
       color: $yellowColorOnHover;
       border-bottom: solid $yellowColorOnHover 2px;
     }
@@ -387,7 +389,9 @@ header {
   line-height: 24px;
   margin: 40px auto 88px;
 }
-
+.accordion {
+  width: 50%;
+}
 .accordion-section {
   margin-left: 30px;
   border: 1px solid $borderColorLight;
@@ -400,14 +404,27 @@ header {
   @include justify-content(space-between);
   @include align-items(flex-start);
   border-bottom: 1px solid $borderColorLight;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: 0.4s;
   img {
     padding: 16px 0px 12px 16px;
   }
-  i {
+  &::after {
     color: $fontColorLightGrey;
     font-size: 40px;
     margin-right: 18px;
     margin-top: 10px;
+    font-family:'FontAwesome';
+    content:"\f107";
+    float: right;
+  }
+  &.active {
+    &::after {
+      content:"\f106";
+    }
   }
 }
 
@@ -446,6 +463,14 @@ header {
       background: $greenColor;
     }
   }
+}
+
+.panel {
+  display: none;
+}
+
+.panel.show {
+  display: block;
 }
 
 .comments {
@@ -624,6 +649,8 @@ header {
   @include template-rows(50% 50%);
   img {
     max-width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
   }
 }
 
@@ -1001,6 +1028,9 @@ footer {
   }
 }
 
+@import 'navbar';
+@import 'popup';
+@import 'blockquotes';
 @import 'media/media1200';
 @import 'media/tablet';
 @import 'media/mobileL';

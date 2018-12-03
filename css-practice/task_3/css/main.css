@@ -5,6 +5,9 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff; }
@@ -20,7 +23,7 @@ button {
     outline: none; }
 
 header {
-  height: 90px;
+  height: 75px;
   font-family: "Montserrat", sans-serif;
   font-size: 30px; }
   header .container {
@@ -64,7 +67,7 @@ header {
       display: none; }
       .header-nav-bar a:last-child:hover {
         border-bottom: none; }
-    .header-nav-bar a:hover {
+    .header-nav-bar a:hover, .header-nav-bar a:active {
       color: #fce38a;
       border-bottom: solid #fce38a 2px; }
 
@@ -406,6 +409,9 @@ header {
   line-height: 24px;
   margin: 40px auto 88px; }
 
+.accordion {
+  width: 50%; }
+
 .accordion-section {
   margin-left: 30px;
   border: 1px solid #e5e5e5;
@@ -430,14 +436,24 @@ header {
   -moz-align-items: flex-start;
   -ms-align-items: flex-start;
   align-items: flex-start;
-  border-bottom: 1px solid #e5e5e5; }
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: 0.4s; }
   .accordion-heading img {
     padding: 16px 0px 12px 16px; }
-  .accordion-heading i {
+  .accordion-heading::after {
     color: #cccccc;
     font-size: 40px;
     margin-right: 18px;
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-family: 'FontAwesome';
+    content: "\f107";
+    float: right; }
+  .accordion-heading.active::after {
+    content: "\f106"; }
 
 .accordion-section h3 {
   color: #333333;
@@ -469,6 +485,12 @@ header {
   .accordion-section p::-webkit-scrollbar-thumb {
     border-radius: 3px;
     background: #95e1d3; }
+
+.panel {
+  display: none; }
+
+.panel.show {
+  display: block; }
 
 .comments {
   background-color: #f8f8f8; }
@@ -659,7 +681,9 @@ header {
   -ms-grid-rows: 50% 50%;
   grid-template-rows: 50% 50%; }
   .work-images img {
-    max-width: 100%; }
+    max-width: 100%;
+    cursor: pointer;
+    transition: 0.3s; }
 
 .larger-picture {
   -ms-grid-row: 1;
@@ -1030,6 +1054,127 @@ footer {
   padding-top: 22px; }
   .copyrights span {
     color: #f38181; }
+
+.scrolling-header {
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-color: rgba(34, 61, 97, 0.64);
+  border: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.9); }
+  .modal.show-image {
+    display: block; }
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 90%; }
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px; }
+
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s; }
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0); }
+  to {
+    -webkit-transform: scale(1); } }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s; }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; }
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    max-width: 100%; } }
+
+.comments .container,
+.blockquotes .container {
+  position: relative;
+  padding: 70px;
+  -webkit-transition: all 1.0s ease-in-out;
+  -moz-transition: all 1.0s ease-in-out;
+  -o-transition: all 1.0s ease-in-out;
+  transition: all 1.0s ease-in-out; }
+
+.comment {
+  padding: 0; }
+
+.slide {
+  display: none; }
+  .slide.show-comment {
+    display: flex; }
+  .slide .speech-icon {
+    align-self: center; }
+
+.slide-2 {
+  display: none; }
+  .slide-2.show-comment {
+    display: flex; }
+  .slide-2 .author-photo {
+    align-self: center; }
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  padding: 10px;
+  border-radius: 3px;
+  user-select: none;
+  top: 150px; }
+
+.next {
+  right: 0; }
+
+.prev {
+  left: 0; }
+
+.prev:hover, .next:hover {
+  background-color: #000000; }
 
 @media only screen and (max-width: 1200px) {
   .container {
