@@ -397,7 +397,12 @@ header {
   border: 1px solid $borderColorLight;
   margin-bottom: 10px;
 }
-
+.accordion-image {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
 .accordion-heading {
   @include flexbox();
   @include flex-direction(row);
@@ -409,8 +414,11 @@ header {
   cursor: pointer;
   border: none;
   transition: 0.4s;
+  position: relative;
+  background: none;
   img {
     padding: 16px 0px 12px 16px;
+    z-index: -1;
   }
   &::after {
     color: $fontColorLightGrey;
@@ -420,6 +428,7 @@ header {
     font-family:'FontAwesome';
     content:"\f107";
     float: right;
+    z-index: -1;
   }
   &.active {
     &::after {
@@ -437,6 +446,7 @@ header {
     text-transform: uppercase;
     margin: auto;
     margin-left: 12px;
+    z-index: -1;
   }
   p {
     color: $fontColorGrey;
@@ -523,7 +533,6 @@ header {
 .speech-icon {
   border: 3px solid $greenColor;
   padding: 40px;
-  margin-bottom: 20px;
   width: 150px;
   height: 150px;
 }

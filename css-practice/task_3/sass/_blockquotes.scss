@@ -3,12 +3,16 @@
   .container {
     position: relative;
     padding: 70px;
-    -webkit-transition:all 1.0s ease-in-out;
-    -moz-transition:all 1.0s ease-in-out;
-    -o-transition:all 1.0s ease-in-out;
-    transition:all 1.0s ease-in-out;
   }
 }
+.slider {
+  overflow: hidden;
+}
+// .holder {
+//   width: 300%;
+//   display: flex;
+//   transition-delay: 3s; 
+// }
 .comment {
   padding: 0;
 }
@@ -16,6 +20,7 @@
   display: none;
   &.show-comment {
     display: flex;
+    align-items: center;
   }
   .speech-icon {
   align-self: center;

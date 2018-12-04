@@ -24,6 +24,7 @@ function showSlides(n, no) {
 const prev = document.getElementsByClassName('prev');
 const next = document.getElementsByClassName('next');
 
+
 for (let i = 0; i < prev.length; i++) {
   prev[i].onclick = function() {
     plusSlides(-1, i);

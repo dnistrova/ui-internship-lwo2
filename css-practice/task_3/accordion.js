@@ -1,3 +1,4 @@
+/* global document */
 const acc = document.getElementsByClassName('accordion-heading');
 const panel = document.getElementsByClassName('panel');
 
@@ -21,3 +22,20 @@ function setClass(els, className, fnName) {
 }
 
 document.getElementsByClassName('default-open')[0].click();
+
+function activateTab(evt) {
+  const tab = evt.target;
+  const dataId = tab.getAttribute('data-id');
+  const tabImage = document.getElementsByClassName('accordion-image');
+
+  for (let i = 0; i < acc.length; i++) {
+    tabImage[i].classList.remove('active');
+  }
+
+  const activeImage = document.getElementById(dataId);
+  activeImage.classList.add('active');
+}
+
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener('click', activateTab, true);
+}
