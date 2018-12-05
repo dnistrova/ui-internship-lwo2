@@ -50,8 +50,6 @@ const formValidationModule = (function () {
     }
   }
 
-  form.addEventListener('keyup', validatePattern, true);
-
   function notDisabled() {
     const validInputs = inputs.every((el) => el.classList.contains('valid'));
 
@@ -64,6 +62,7 @@ const formValidationModule = (function () {
 
   return {
     init: () => {
+      form.addEventListener('keyup', validatePattern, true);
       form.addEventListener('keyup', notDisabled, true);
     },
   };
