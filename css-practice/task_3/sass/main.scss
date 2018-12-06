@@ -774,6 +774,7 @@ header {
 .blog-articles {
   margin-top: 46px;
   margin-bottom: 80px;
+  flex-wrap: wrap;
   article {
     max-width: 380px;
   }
@@ -962,6 +963,8 @@ footer {
 .footer-blogs {
   margin-top: 14px;
   padding-right: 6px;
+  max-height: 380px;
+  overflow: scroll;
   h2 {
     color: $fontColorBlack;
     font-family: $font-montserrat;

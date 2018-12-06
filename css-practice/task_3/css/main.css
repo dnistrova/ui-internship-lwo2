@@ -800,7 +800,8 @@ header {
 
 .blog-articles {
   margin-top: 46px;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  flex-wrap: wrap; }
   .blog-articles article {
     max-width: 380px; }
   .blog-articles img {
@@ -982,7 +983,9 @@ footer {
 
 .footer-blogs {
   margin-top: 14px;
-  padding-right: 6px; }
+  padding-right: 6px;
+  max-height: 380px;
+  overflow: scroll; }
   .footer-blogs h2 {
     color: #333333;
     font-family: "Montserrat", sans-serif;
