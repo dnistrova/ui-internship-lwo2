@@ -8,17 +8,17 @@ function plusSlides(n, no) {
 }
 
 function showSlides(n, no) {
-  const x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {
+  const activeSlider = Array.from(document.getElementsByClassName(slideId[no]));
+  if (n > activeSlider.length) {
     slideIndex[no] = 1;
   }
   if (n < 1) {
-    slideIndex[no] = x.length;
+    slideIndex[no] = activeSlider.length;
   }
-  for (let i = 0; i < x.length; i++) {
-    x[i].classList.remove('show-comment');
-  }
-  x[slideIndex[no]-1].classList.add('show-comment');
+  activeSlider.forEach((element) => {
+    element.classList.remove('show-comment');
+  });
+  activeSlider[slideIndex[no]-1].classList.add('show-comment');
 }
 
 const prev = document.getElementsByClassName('prev');
