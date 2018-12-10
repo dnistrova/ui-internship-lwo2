@@ -801,11 +801,15 @@ header {
 .blog-articles {
   margin-top: 46px;
   margin-bottom: 80px;
-  flex-wrap: wrap; }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30% 30%;
+  grid-template-columns: 30% 30% 30%; }
   .blog-articles article {
     max-width: 380px; }
   .blog-articles img {
-    position: relative; }
+    position: relative;
+    width: 100%; }
 
 .calendar {
   background-color: #95e1d3;
@@ -850,7 +854,10 @@ header {
   top: -46px;
   padding-bottom: 16px;
   padding-right: 2px;
-  border-bottom: 1px solid #e5e5e5; }
+  border-bottom: 1px solid #e5e5e5;
+  height: 78px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .counter {
   display: -webkit-box;
@@ -985,7 +992,11 @@ footer {
   margin-top: 14px;
   padding-right: 6px;
   max-height: 380px;
-  overflow: scroll; }
+  overflow-y: scroll;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+  grid-template-columns: 100%; }
   .footer-blogs h2 {
     color: #333333;
     font-family: "Montserrat", sans-serif;
@@ -995,23 +1006,15 @@ footer {
 
 .footer-blog {
   max-width: 350px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -ms-flex-pack: space-between; }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 34% 60%;
+  grid-template-columns: 34% 60%;
+  column-gap: 4%; }
   .footer-blog img {
     margin-right: 20px;
-    margin-bottom: 28px; }
+    margin-bottom: 28px;
+    width: 100%; }
   .footer-blog p {
     color: #333333;
     font-family: "Montserrat", sans-serif;
@@ -1021,7 +1024,7 @@ footer {
     text-transform: uppercase; }
 
 .footer-blog-text {
-  margin-top: 18px; }
+  margin-bottom: 10px; }
 
 .footer-blog-date {
   color: #999999;
@@ -1222,9 +1225,11 @@ footer {
     -ms-grid-rows: 50% 50%;
     grid-template-rows: 50% 50%; }
   .three-images.blog-articles {
-    width: 100%; }
+    width: 100%;
+    -ms-grid-columns: 45% 45%;
+    grid-template-columns: 45% 45%; }
     .three-images.blog-articles article {
-      max-width: 30%; }
+      max-width: 100%; }
       .three-images.blog-articles article img {
         max-width: 100%; }
   .happy-clients {

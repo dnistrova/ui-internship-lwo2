@@ -774,12 +774,14 @@ header {
 .blog-articles {
   margin-top: 46px;
   margin-bottom: 80px;
-  flex-wrap: wrap;
+  @include grid();
+  @include template-columns(30% 30% 30%);
   article {
     max-width: 380px;
   }
   img {
     position: relative;
+    width: 100%;
   }
 }
 .calendar {
@@ -829,6 +831,9 @@ header {
     padding-bottom: 16px;
     padding-right: 2px;
     border-bottom: 1px solid $borderColorLight;
+    height: 78px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 .counter {
@@ -964,7 +969,9 @@ footer {
   margin-top: 14px;
   padding-right: 6px;
   max-height: 380px;
-  overflow: scroll;
+  overflow-y: scroll;
+  @include grid();
+  @include template-columns(100%);
   h2 {
     color: $fontColorBlack;
     font-family: $font-montserrat;
@@ -975,12 +982,13 @@ footer {
 }
 .footer-blog {
   max-width: 350px;
-  @include flexbox();
-  @include flex-direction(row);
-  @include justify-content(space-between);
+  @include grid();
+  @include template-columns(34% 60%);
+  column-gap: 4%;
   img {
     margin-right: 20px;
     margin-bottom: 28px;
+    width: 100%;
   }
   p {
     color: $fontColorBlack;
@@ -992,7 +1000,7 @@ footer {
   }
 }
 .footer-blog-text {
-  margin-top: 18px;
+  margin-bottom: 10px;
 }
 .footer-blog-date {
   color: $fontColorGrey;
