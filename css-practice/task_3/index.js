@@ -1,11 +1,7 @@
-const articlesSection = document.querySelector('.blog-articles');
-const blogsSection = document.querySelector('.footer-blogs');
-
-function RenderArticleItem(model) {
+function renderArticleItem(model) {
   const {previewImg, title, description, watched, comments, published} = model;
-  const day = new Date(published).getDate();
-  const month = formatMonth(published);
   const element = document.createElement('article');
+  const {month, day} = parseDate(published);
 
   const article = `
       <img src="${previewImg}" alt="">
@@ -28,28 +24,39 @@ function RenderArticleItem(model) {
 }
 
 function renderer(res) {
-  res.blogs.forEach(((model) => {
-    blogsSection.appendChild(new RenderBlogItem(model));
+  const articlesSection = document.querySelector('.blog-articles');
+  const blogsSection = document.querySelector('.footer-blogs');
+
+  const footerBlogs = res.blogs.filter((blog) => {
+    return !res.latest.includes(blog.id);
+  });
+  footerBlogs.forEach(((model) => {
+    blogsSection.appendChild(new renderBlogItem(model));
   }));
+
   const blogs = res.blogs.filter((blog) => {
     return res.latest.includes(blog.id);
   });
   blogs.forEach(((model)=> {
-    articlesSection.appendChild(new RenderArticleItem(model));
+    articlesSection.appendChild(new renderArticleItem(model));
   }));
 }
 
-function formatMonth(published) {
+function parseDate(published) {
   const date = new Date(published);
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  const day = date.getDate();
 
-  return months[date.getMonth()];
+  return {day, month, year};
 }
 
-function RenderBlogItem(model) {
+function renderBlogItem(model) {
   const {previewImg, title, published} = model;
-  const date = showFormattedDate(new Date(published));
   const element = document.createElement('div');
+  const {month, day, year} = parseDate(published);
+  const date = `${month} ${day}, ${year}`;
   element.classList.add('footer-blog');
 
   const blog = `
@@ -64,14 +71,6 @@ function RenderBlogItem(model) {
 
   element.innerHTML = blog;
   return (element);
-}
-
-function showFormattedDate(published) {
-  const date = new Date(published);
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const MMM = months[date.getMonth()];
-
-  return MMM + ' ' + date.getDate() + ', ' + date.getFullYear();
 }
 
 fetch('http://localhost:3000/api/blogs')
