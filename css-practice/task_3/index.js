@@ -26,19 +26,21 @@ function renderArticleItem(model) {
 function renderer(res) {
   const articlesSection = document.querySelector('.blog-articles');
   const blogsSection = document.querySelector('.footer-blogs');
+  const latestBlogs = [];
+  const footerBlogs = [];
 
-  const footerBlogs = res.blogs.filter((blog) => {
-    return !res.latest.includes(blog.id);
+  res.blogs.forEach((blog) => {
+    if (res.latest.includes(blog.id)) {
+      latestBlogs.push(blog);
+    } else {
+      footerBlogs.push(blog);
+    }
   });
+  latestBlogs.forEach(((model)=> {
+    articlesSection.appendChild(new renderArticleItem(model));
+  }));
   footerBlogs.forEach(((model) => {
     blogsSection.appendChild(new renderBlogItem(model));
-  }));
-
-  const blogs = res.blogs.filter((blog) => {
-    return res.latest.includes(blog.id);
-  });
-  blogs.forEach(((model)=> {
-    articlesSection.appendChild(new renderArticleItem(model));
   }));
 }
 
