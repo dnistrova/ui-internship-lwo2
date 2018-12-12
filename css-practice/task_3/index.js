@@ -23,9 +23,7 @@ function renderArticleItem(model) {
   return (element);
 }
 
-function renderer(res) {
-  const articlesSection = document.querySelector('.blog-articles');
-  const blogsSection = document.querySelector('.footer-blogs');
+function filterBlogs(res) {
   const latestBlogs = [];
   const footerBlogs = [];
 
@@ -36,11 +34,16 @@ function renderer(res) {
       footerBlogs.push(blog);
     }
   });
-  latestBlogs.forEach(((model)=> {
-    articlesSection.appendChild(new renderArticleItem(model));
-  }));
-  footerBlogs.forEach(((model) => {
-    blogsSection.appendChild(new renderBlogItem(model));
+
+  return {
+    latestBlogs,
+    footerBlogs,
+  };
+}
+
+function renderBlogs(blogs, container, factory) {
+  blogs.forEach(((model) => {
+    container.appendChild(factory(model));
   }));
 }
 
@@ -75,6 +78,21 @@ function renderBlogItem(model) {
   return (element);
 }
 
-fetch('http://localhost:3000/api/blogs')
-  .then(response => response.json())
-  .then(renderer);
+function handleResponse(res) {
+  const {latestBlogs, footerBlogs} = filterBlogs(res);
+
+  const articlesSection = document.querySelector('.blog-articles');
+  const blogsSection = document.querySelector('.footer-blogs');
+
+  renderBlogs(latestBlogs, articlesSection, renderArticleItem);
+  renderBlogs(footerBlogs, blogsSection, renderBlogItem);
+}
+
+function fetchData() {
+  fetch('http://localhost:3000/api/blogs')
+    .then(response => response.json())
+    .then(handleResponse);
+}
+
+window.onload = fetchData;
+
