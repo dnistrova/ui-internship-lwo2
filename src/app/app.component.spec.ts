@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
+import { HeaderNavComponent } from './header/header-nav/header-nav.component';
+import { HeaderContactsComponent } from './header/header-contacts/header-contacts.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,7 +17,9 @@ describe('AppComponent', () => {
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        MainComponent
+        MainComponent,
+        HeaderNavComponent,
+        HeaderContactsComponent
       ],
     }).compileComponents();
   }));

@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
+import { HeaderContactsComponent } from './header/header-contacts/header-contacts.component';
+import { HeaderNavComponent } from './header/header-nav/header-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    HeaderContactsComponent,
+    HeaderNavComponent
   ],
   imports: [
     BrowserModule,
