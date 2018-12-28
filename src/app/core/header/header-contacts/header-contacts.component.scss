@@ -7,25 +7,25 @@ hr {
   border-top: 1px solid $border-color;
 }
 
+i, a {
+  &:hover, &:active {
+  color: $primary-color;
+  cursor: pointer;
+  }
+}
+
 .small-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 16px;
-  a {
-    &:hover {
-      color: $primary-color;
-    }
-  }
 }
 
 .header-left-bar {
   display: flex;
   flex-direction: row;
 }
-
-
 
 .main-container {
   padding: 0 $content-padding;
@@ -68,9 +68,6 @@ hr {
   i {
     font-size: 20px;
     padding-left: 33px;
-    &:hover, &:active {
-      color: $primary-color;
-    }
   }
 }
 
@@ -91,4 +88,32 @@ hr {
   font-size: 12px;
   text-align: center;
   display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .small-header {
+    flex-wrap: wrap;
+  }
+
+  .header-left-bar {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  .header-left-bar {
+    width: 100%;
+    align-items: center;
+    .mail {
+      margin-right: 0;
+    }
+  }
+
+  .social-media {
+    width: 100%;
+    text-align: center;
+    a:first-child {
+      margin-left: 0;
+    }
+  }
 }
