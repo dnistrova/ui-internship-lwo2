@@ -104,11 +104,13 @@ i, a {
   padding: 0;
   border: 0;
 }
+
 @media only screen and (max-width: 1024px) {
   .big-header {
     flex-wrap: wrap;
     text-align: center;
   }
+
   .logo {
     width: 100%;
     margin-right: 0;
@@ -120,10 +122,12 @@ i, a {
   nav.hideMenu {
     display: none;
   }
+
  .main-nav {
   position: absolute;
   top: 194px;
  }
+
   nav.revealMenu {
     display: flex;
     flex-direction: column;
@@ -137,6 +141,7 @@ i, a {
       border-bottom: 1px solid $border-color;
     }
   }
+
   .big-header {
     justify-content: space-between;
     align-items: center;
@@ -155,7 +160,6 @@ i, a {
     margin-right: 0;
     margin-bottom: 0;
   }
-
 }
 
 @media only screen and (max-width: 424px) {
@@ -181,6 +185,7 @@ i, a {
     top: 160px;
     width: 100%;
   }
+
   .header-right-bar {
     padding-bottom: 10px;
     button {
@@ -189,8 +194,9 @@ i, a {
       }
     }
   }
+
   .logo {
     padding-bottom: 10px;
+    width: 100%;
   }
-
 }

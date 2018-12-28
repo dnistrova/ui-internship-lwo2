@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-nav.component.scss']
 })
 export class HeaderNavComponent implements OnInit {
-  searchIsOpen: boolean = false;
+  searchIsOpen = false;
 
   clickHandler = () => {
     this.searchIsOpen = !this.searchIsOpen;
-  };
-  
+  }
+
   constructor() { }
 
   ngOnInit() {
