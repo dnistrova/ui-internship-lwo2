@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import "./sass/mixins";
 @import "./sass/variables";
 @import "./sass/fonts";
 @import "./sass/reset";
-
-
+@import "./sass/media/laptop";
+@import "./sass/media/tablet";
+@import "./sass/media/mobileL";

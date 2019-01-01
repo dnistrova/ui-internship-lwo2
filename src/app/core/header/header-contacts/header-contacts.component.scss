@@ -1,4 +1,5 @@
 @import '../../../../sass/variables';
+@import '../../../../sass/mixins';
 @import '../../../../sass/fonts';
 @import '../../../../sass/reset';
 
@@ -15,16 +16,16 @@ i, a {
 }
 
 .small-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-between);
   padding-top: 20px;
   padding-bottom: 16px;
 }
 
 .header-left-bar {
-  display: flex;
-  flex-direction: row;
+  @include flexbox();
+  @include flex-direction(row);
 }
 
 .main-container {
@@ -35,7 +36,7 @@ i, a {
 .mail {
   margin-right: 15px;
   color: $black-color;
-  font-size: 12px;
+  @include font-size-small;
   img {
     margin-right: 9px;
   }
@@ -43,7 +44,7 @@ i, a {
 
 .pnone-number {
   color: $black-color;
-  font-size: 12px;
+  @include font-size-small;
   img {
     margin-right: 9px;
   }
@@ -52,7 +53,7 @@ i, a {
 .social-media {
   a {
   color: $black-color;
-  font-size: 14px;
+  @include font-size-regular;
   margin-left: 20px;
   }
 }
@@ -63,10 +64,10 @@ i, a {
 
 .header-right-bar {
   padding-top: 13px;
-  display: flex;
+  @include flexbox();
   position: relative;
   i {
-    font-size: 20px;
+    @include font-size-large;
     padding-left: 33px;
   }
 }
@@ -85,35 +86,10 @@ i, a {
   width: 18px;
   height: 18px;
   color: $white-color;
-  font-size: 12px;
+  @include font-size-small;
   text-align: center;
   display: none;
 }
 
-@media only screen and (max-width: 767px) {
-  .small-header {
-    flex-wrap: wrap;
-  }
-
-  .header-left-bar {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 424px) {
-  .header-left-bar {
-    width: 100%;
-    align-items: center;
-    .mail {
-      margin-right: 0;
-    }
-  }
-
-  .social-media {
-    width: 100%;
-    text-align: center;
-    a:first-child {
-      margin-left: 0;
-    }
-  }
-}
+@import '../../../../sass/media/tablet';
+@import '../../../../sass/media/mobileL';

@@ -16,3 +16,15 @@
 $mainFontBold: HarmoniaSansProCyr-bold;
 $mainFontItalic: HarmoniaSansProCyr-italic;
 $mainFontRegular: HarmoniaSansProCyr-regular;
+
+@mixin font-size-small {
+  font-size: 12px;
+}
+
+@mixin font-size-regular {
+  font-size: 14px;
+}
+
+@mixin font-size-large {
+  font-size: 20px;
+}

@@ -1,7 +1,7 @@
+@import '../../../../sass/mixins';
 @import '../../../../sass/variables';
 @import '../../../../sass/fonts';
 @import '../../../../sass/reset';
-
 
 button {
   outline: none;
@@ -28,17 +28,17 @@ i, a {
 }
 
 .main-nav {
-  display: flex;
+  @include flexbox();
 }
 
 .big-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-between);
   padding-top: 40px;
   padding-bottom: 42px;
   nav {
-    padding-top: 10px;
+    padding-top: $standart-bottom-padding;
     a:nth-child(3) {
       white-space: nowrap;
     }
@@ -46,9 +46,8 @@ i, a {
 }
 
 .header-nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  @include flexbox();
+  @include flex-wrap (wrap);
   a {
     padding-right: 28px;
   }
@@ -60,13 +59,12 @@ i, a {
 
 .header-right-bar {
   padding-top: 13px;
-  display: flex;
+  @include flexbox();
   position: relative;
-  flex-wrap: nowrap;
-  align-items: baseline;
-
+  @include flex-wrap(nowrap);
+  @include align-items(baseline);
   i {
-    font-size: 20px;
+    @include font-size-large;
     padding-left: 33px;
   }
 }
@@ -89,15 +87,15 @@ i, a {
   width: 18px;
   height: 18px;
   color: $white-color;
-  font-size: 12px;
+  @include font-size-small;
   text-align: center;
 }
 
-.active {
+.active-search {
   width: 100%;
 }
 
-.unactive {
+.unactive-search {
   width: 0;
   overflow: hidden;
   display: none;
@@ -105,99 +103,6 @@ i, a {
   border: 0;
 }
 
-@media only screen and (max-width: 1024px) {
-  .big-header {
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .logo {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 25px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  nav.hideMenu {
-    display: none;
-  }
-
- .main-nav {
-  position: absolute;
-  top: 194px;
-  left: 0;
- }
-
-  nav.revealMenu {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    text-align: center;
-    margin: 0 auto;
-    background-color: $white-color;
-    opacity: 0.9;
-    a {
-      padding-right: 0;
-      border-bottom: 1px solid $border-color;
-    }
-  }
-
-  .big-header {
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .burger {
-      display: flex;
-  }
-
-  .header-nav-bar {
-    display: none;
-  }
-
-  .logo {
-    width: 40%;
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (max-width: 424px) {
-  nav.revealMenu {
-    left: 0;
-    top: 120px;
-    width: 100%;
-  }
-
-  .big-header {
-    flex-direction: column-reverse;
-    align-items: center;
-    padding-top: 10px;
-  }
-
-  .main-container {
-    position: relative;
-  }
-
-  .main-nav {
-    flex-direction: column;
-    position: absolute;
-    top: 160px;
-    width: 100%;
-  }
-
-  .header-right-bar {
-    padding-bottom: 10px;
-    button {
-      i {
-        padding-left: 0;
-      }
-    }
-  }
-
-  .logo {
-    padding-bottom: 10px;
-    width: 100%;
-  }
-}
+@import '../../../../sass/media/laptop';
+@import '../../../../sass/media/tablet';
+@import '../../../../sass/media/mobileL';
