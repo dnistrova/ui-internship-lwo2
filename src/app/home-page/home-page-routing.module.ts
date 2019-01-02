@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './page-not-found.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes = [
-  {path: '', component: PageNotFoundComponent}
+  {path: '', component: HomePageComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PageNotFoundRoutingModule { }
+export class HomePageRoutingModule { }
