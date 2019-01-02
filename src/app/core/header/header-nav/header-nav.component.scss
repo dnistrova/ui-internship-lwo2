@@ -1,7 +1,7 @@
-@import '../../../../sass/mixins';
-@import '../../../../sass/variables';
-@import '../../../../sass/fonts';
-@import '../../../../sass/reset';
+@import '../../../../scss/mixins';
+@import '../../../../scss/variables';
+@import '../../../../scss/fonts';
+@import '../../../../scss/reset';
 
 button {
   outline: none;
@@ -9,7 +9,7 @@ button {
 }
 
 input {
-  border: 1px solid $border-color;
+  border: $main-border;
   border-radius: 3px;
   margin-top: 10px;
   padding: 0 3px;
@@ -37,8 +37,10 @@ i, a {
   @include justify-content(space-between);
   padding-top: 40px;
   padding-bottom: 42px;
+
   nav {
     padding-top: $standart-bottom-padding;
+
     a:nth-child(3) {
       white-space: nowrap;
     }
@@ -48,6 +50,7 @@ i, a {
 .header-nav-bar {
   @include flexbox();
   @include flex-wrap (wrap);
+
   a {
     padding-right: 28px;
   }
@@ -63,8 +66,9 @@ i, a {
   position: relative;
   @include flex-wrap(nowrap);
   @include align-items(baseline);
+
   i {
-    @include font-size-large;
+    font-size: $fontSizeLarge;
     padding-left: 33px;
   }
 }
@@ -87,7 +91,7 @@ i, a {
   width: 18px;
   height: 18px;
   color: $white-color;
-  @include font-size-small;
+  font-size: $fontSizeSmall;
   text-align: center;
 }
 
@@ -103,6 +107,107 @@ i, a {
   border: 0;
 }
 
-@import '../../../../sass/media/laptop';
-@import '../../../../sass/media/tablet';
-@import '../../../../sass/media/mobileL';
+@include laptop {
+  .big-header {
+    @include flex-wrap(wrap);
+    text-align: center;
+  }
+  
+  .logo {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+}
+
+@include tablet {
+  nav.hidden-menu {
+    display: none;
+  }
+
+ .main-nav {
+  position: absolute;
+  top: 194px;
+  left: 0;
+ }
+
+  nav.active-menu {
+    @include flexbox();
+    @include flex-direction(column);
+    width: 100vw;
+    text-align: center;
+    margin: 0 auto;
+    background-color: $white-color;
+    opacity: 0.9;
+
+    a {
+      padding-right: 0;
+      border-bottom: $main-border;
+    }
+  }
+
+  .big-header {
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  .burger {
+    @include flexbox();
+  }
+
+  .header-nav-bar {
+    display: none;
+  }
+  
+  .logo {
+    width: 40%;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+}
+
+@include mobile {
+  nav.active-menu {
+    left: 0;
+    top: 120px;
+    width: 100%;
+  }
+
+  .big-header {
+    @include flex-direction(column-reverse);
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .main-container {
+    position: relative;
+  }
+
+  .main-nav {
+    @include flex-direction(column);
+    position: absolute;
+    top: 160px;
+    width: 100%;
+  }
+
+  .header-right-bar {
+    padding-bottom: $standart-bottom-padding;
+
+    button {
+      i {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .logo {
+    @include flexbox();
+    padding-bottom: $standart-bottom-padding;
+    width: 100%;
+    
+    a {
+      margin: 0 auto;
+    }
+  }
+}

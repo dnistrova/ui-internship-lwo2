@@ -1,11 +1,11 @@
-@import '../../../../sass/variables';
-@import '../../../../sass/mixins';
-@import '../../../../sass/fonts';
-@import '../../../../sass/reset';
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+@import '../../../../scss/fonts';
+@import '../../../../scss/reset';
 
 hr {
   margin: 0 auto;
-  border-top: 1px solid $border-color;
+  border-top: $main-border;
 }
 
 i, a {
@@ -36,7 +36,8 @@ i, a {
 .mail {
   margin-right: 15px;
   color: $black-color;
-  @include font-size-small;
+  font-size: $fontSizeSmall;
+
   img {
     margin-right: 9px;
   }
@@ -44,7 +45,8 @@ i, a {
 
 .pnone-number {
   color: $black-color;
-  @include font-size-small;
+  font-size: $fontSizeSmall;
+
   img {
     margin-right: 9px;
   }
@@ -53,7 +55,7 @@ i, a {
 .social-media {
   a {
   color: $black-color;
-  @include font-size-regular;
+  font-size: $fontSizeRegular;
   margin-left: 20px;
   }
 }
@@ -66,8 +68,9 @@ i, a {
   padding-top: 13px;
   @include flexbox();
   position: relative;
+
   i {
-    @include font-size-large;
+    font-size: $fontSizeLarge;
     padding-left: 33px;
   }
 }
@@ -86,10 +89,39 @@ i, a {
   width: 18px;
   height: 18px;
   color: $white-color;
-  @include font-size-small;
+  font-size: $fontSizeSmall;
   text-align: center;
   display: none;
 }
 
-@import '../../../../sass/media/tablet';
-@import '../../../../sass/media/mobileL';
+@include tablet {
+  .small-header {
+    @include flex-wrap(wrap);
+  }
+
+  .header-left-bar {
+    @include flex-direction(column);
+  }
+}
+
+@include mobile {
+  .header-left-bar {
+    width: 100%;
+    align-items: center;
+
+    .mail {
+      margin-right: 0;
+    }
+  }
+
+  .social-media {
+    width: 100%;
+    text-align: center;
+
+    a {
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -39,3 +39,21 @@
       -ms-align-items: $align;
           align-items: $align;
 }
+
+@mixin laptop {
+  @media only screen and (max-width:  1024px) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width:  768px) {
+    @content
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width:  424px) {
+    @content
+  }
+}
