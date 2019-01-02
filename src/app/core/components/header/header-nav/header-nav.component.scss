@@ -28,13 +28,13 @@ i, a {
 }
 
 .main-nav {
-  @include flexbox();
+  display: flex;
 }
 
 .big-header {
-  @include flexbox();
-  @include flex-direction(row);
-  @include justify-content(space-between);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 42px;
 
@@ -48,8 +48,8 @@ i, a {
 }
 
 .header-nav-bar {
-  @include flexbox();
-  @include flex-wrap (wrap);
+  display: flex;
+  flex-wrap: wrap;
 
   a {
     padding-right: 28px;
@@ -62,10 +62,10 @@ i, a {
 
 .header-right-bar {
   padding-top: 13px;
-  @include flexbox();
+  display: flex;
   position: relative;
-  @include flex-wrap(nowrap);
-  @include align-items(baseline);
+  flex-wrap: nowrap;
+  align-items: baseline;
 
   i {
     font-size: $font-size-large;
@@ -109,7 +109,7 @@ i, a {
 
 @include laptop {
   .big-header {
-    @include flex-wrap(wrap);
+    flex-wrap: wrap;
     text-align: center;
   }
   
@@ -132,8 +132,8 @@ i, a {
  }
 
   nav.active-menu {
-    @include flexbox();
-    @include flex-direction(column);
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     text-align: center;
     margin: 0 auto;
@@ -147,12 +147,12 @@ i, a {
   }
 
   .big-header {
-    @include justify-content(space-between);
-    @include align-items(center);
+    justify-content: space-between;
+    align-items: center;
   }
 
   .burger {
-    @include flexbox();
+    display: flex;
   }
 
   .header-nav-bar {
@@ -175,7 +175,7 @@ i, a {
   }
 
   .big-header {
-    @include flex-direction(column-reverse);
+    flex-direction: column-reverse;
     align-items: center;
     padding-top: 10px;
   }
@@ -185,7 +185,7 @@ i, a {
   }
 
   .main-nav {
-    @include flex-direction(column);
+    flex-direction: column;
     position: absolute;
     top: 160px;
     width: 100%;
@@ -202,7 +202,7 @@ i, a {
   }
 
   .logo {
-    @include flexbox();
+    display: flex;
     padding-bottom: $standart-bottom-padding;
     width: 100%;
     

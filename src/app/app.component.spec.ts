@@ -16,18 +16,3 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 });
-
-// describe('AppComponent', () => {
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       imports: [
-//         RouterTestingModule.withRoutes([
-//           { path: '', component: AppComponent }
-//         ])
-//       ],
-//       declarations: [
-//         AppComponent
-//       ],
-//     });
-//   });
-// });

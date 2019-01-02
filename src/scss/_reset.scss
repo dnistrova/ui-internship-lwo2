@@ -2,12 +2,12 @@
   border: none;
   margin: 0;
   padding: 0;
-  @include box-sizing();
+  box-sizing: border-box;
 }
 
 body {
   background: $bg-color;
-  font-family: $mainFontRegular;
+  font-family: $main-font-regular;
 }
 
 a {
