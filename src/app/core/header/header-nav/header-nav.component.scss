@@ -68,7 +68,7 @@ i, a {
   @include align-items(baseline);
 
   i {
-    font-size: $fontSizeLarge;
+    font-size: $font-size-large;
     padding-left: 33px;
   }
 }
@@ -91,7 +91,7 @@ i, a {
   width: 18px;
   height: 18px;
   color: $white-color;
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
   text-align: center;
 }
 

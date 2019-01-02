@@ -36,7 +36,7 @@ i, a {
 .mail {
   margin-right: 15px;
   color: $black-color;
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 
   img {
     margin-right: 9px;
@@ -45,7 +45,7 @@ i, a {
 
 .pnone-number {
   color: $black-color;
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
 
   img {
     margin-right: 9px;
@@ -55,7 +55,7 @@ i, a {
 .social-media {
   a {
   color: $black-color;
-  font-size: $fontSizeRegular;
+  font-size: $font-size-regular;
   margin-left: 20px;
   }
 }
@@ -70,7 +70,7 @@ i, a {
   position: relative;
 
   i {
-    font-size: $fontSizeLarge;
+    font-size: $font-size-large;
     padding-left: 33px;
   }
 }
@@ -89,7 +89,7 @@ i, a {
   width: 18px;
   height: 18px;
   color: $white-color;
-  font-size: $fontSizeSmall;
+  font-size: $font-size-small;
   text-align: center;
   display: none;
 }
