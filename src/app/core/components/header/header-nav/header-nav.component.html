@@ -1,5 +1,5 @@
 <div class="main-container">
-    <input [ngClass]="{'active-search': searchIsOpen, 'unactive-search': !searchIsOpen}" placeholder="Search"/>
+    <input [ngClass]="{'active-search': isSearchOpen, 'unactive-search': !isSearchOpen}" placeholder="Search"/>
     <section class="big-header">
       <div class="burger">
           <button class="burger-button" (click)="showMenu = !showMenu"><i class="fas fa-bars"></i></button>
@@ -17,7 +17,7 @@
         </nav>
       </div>
       <div class="header-right-bar">
-        <button class="search-button" (click)="clickHandler()"><i class="icon-search"></i></button>
+        <button class="search-button" (click)="onSearchBtnClick()"><i class="icon-search"></i></button>
         <a routerLink="/user"><i class="fas fa-user-tie"></i></a>
         <div class="cart">
           <div class="cart-items">
