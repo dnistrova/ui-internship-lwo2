@@ -6,8 +6,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeaderContactsComponent } from './components/header/header-contacts/header-contacts.component';
 import { HeaderNavComponent } from './components/header/header-nav/header-nav.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ContentComponent } from './components/content/content.component';
-
 
 @NgModule({
   declarations: [
@@ -15,13 +13,11 @@ import { ContentComponent } from './components/content/content.component';
     FooterComponent,
     HeaderContactsComponent,
     HeaderNavComponent,
-    ContentComponent,
   ], exports: [
     HeaderComponent,
     FooterComponent,
     HeaderContactsComponent,
     HeaderNavComponent,
-    ContentComponent
   ],
 
   imports: [

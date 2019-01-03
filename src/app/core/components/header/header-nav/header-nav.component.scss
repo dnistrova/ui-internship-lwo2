@@ -93,6 +93,7 @@ i, a {
   color: $white-color;
   font-size: $font-size-small;
   text-align: center;
+  user-select: none;
 }
 
 .active-search {
